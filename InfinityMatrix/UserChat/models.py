@@ -9,3 +9,10 @@ class UserChatMessage(models.Model):
     def __str__(self):
         return f"Chat at{self.user_input}"
     
+
+class MyData(models.Model):
+    text=models.TextField()
+    embedding = models.JSONField(null=True, blank=True)
+
+    def __str__(self):
+        return self.text[:50]

@@ -16,7 +16,7 @@ class UserChat(APIView):
                 "error":"user input is required"
             },status=400)
         
-        api_response=generate_api_response(user_input)
+        api_response=ask_agent(user_input)
         print(api_response)
         chat=UserChatMessage.objects.create(
             user_input=user_input,
